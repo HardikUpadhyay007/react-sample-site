@@ -17,8 +17,14 @@ function App() {
             ></Navbar>
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
-                <Route path="login" element={<Login></Login>}></Route>
-                <Route path="signup" element={<Signup></Signup>}></Route>
+                <Route
+                    path="login"
+                    element={<Login setIsLoggedIn={setIsLoggedIn}></Login>}
+                ></Route>
+                <Route
+                    path="signup"
+                    element={<Signup setIsLoggedIn={setIsLoggedIn}></Signup>}
+                ></Route>
                 <Route path="dashboard" element={<Dashboard />}></Route>
             </Routes>
         </div>

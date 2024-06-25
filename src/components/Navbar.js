@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 const Navbar = (props) => {
     let isLoggedIn = props.isLoggedIn;
-    let setisLoggedIn = props.setisLoggedIn;
+    let setIsLoggedIn = props.setIsLoggedIn;
     return (
         <div className="flex justify-evenly">
             <Link to="/">
@@ -38,7 +38,7 @@ const Navbar = (props) => {
                     <Link to="/home">
                         <button
                             onClick={() => {
-                                setisLoggedIn(false);
+                                setIsLoggedIn(false);
                                 toast.success("Logged Out!");
                             }}
                         >

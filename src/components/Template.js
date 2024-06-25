@@ -8,7 +8,7 @@ export const Template = ({
     desc2,
     image,
     formtype,
-    setisLoggedIn,
+    setIsLoggedIn,
 }) => {
     return (
         <div>
@@ -20,9 +20,9 @@ export const Template = ({
                         <span>{desc2}</span>
                     </p>
                     {formtype === "signup" ? (
-                        <SignupForm></SignupForm>
+                        <SignupForm setIsLoggedIn={setIsLoggedIn}></SignupForm>
                     ) : (
-                        <LoginForm></LoginForm>
+                        <LoginForm setIsLoggedIn={setIsLoggedIn}></LoginForm>
                     )}
                 </div>
                 <div>
