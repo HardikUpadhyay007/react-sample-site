@@ -6,32 +6,36 @@ const Navbar = (props) => {
     let isLoggedIn = props.isLoggedIn;
     let setIsLoggedIn = props.setIsLoggedIn;
     return (
-        <div className="flex justify-evenly">
+        <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
             <Link to="/">
-                <img src={logo2} width={160} height={32} loading="lazy"></img>
+                <img src={logo2} width={70} height={32} loading="lazy"></img>
             </Link>
             <nav>
-                <ul className="flex gap-3">
+                <ul className="flex gap-x-6 text-white">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="login">About</Link>
+                        <Link>About</Link>
                     </li>
                     <li>
-                        <Link to="signup">Contact</Link>
+                        <Link>Contact</Link>
                     </li>
                 </ul>
             </nav>
-            <div className="flex ml-5 mr-3 gap-3">
+            <div className="flex items-center gap-x-4 ">
                 {!isLoggedIn && (
                     <Link to="/login">
-                        <button>LogIn</button>
+                        <button className="bg-richblack-800 text-white py-3 px-4 rounded-[8px] border-2 border-gray-400 text-md ">
+                            LogIn
+                        </button>
                     </Link>
                 )}
                 {!isLoggedIn && (
                     <Link to="/signup">
-                        <button>SignUp</button>
+                        <button className="bg-richblack-800 text-white py-3 px-4 rounded-[8px] border-2 border-gray-400 text-md ">
+                            SignUp
+                        </button>
                     </Link>
                 )}
                 {isLoggedIn && (
@@ -41,6 +45,7 @@ const Navbar = (props) => {
                                 setIsLoggedIn(false);
                                 toast.success("Logged Out!");
                             }}
+                            className="bg-richblack-800 text-white py-3 px-4 rounded-[8px] border-2 border-gray-400 text-md "
                         >
                             LogOut
                         </button>
@@ -48,7 +53,9 @@ const Navbar = (props) => {
                 )}
                 {isLoggedIn && (
                     <Link to="/dashboard">
-                        <button>Dashboard</button>
+                        <button className="bg-richblack-800 text-white py-3 px-4 rounded-[8px] border-2 border-gray-400 text-md ">
+                            Dashboard
+                        </button>
                     </Link>
                 )}
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import WallImg from "../assests/wall.jpg";
+import WallImg from "../assests/wall.png";
 import Template from "../components/Template";
 const Signup = ({ setIsLoggedIn }) => {
     return (
